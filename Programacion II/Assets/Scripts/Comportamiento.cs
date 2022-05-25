@@ -4,16 +4,50 @@ using UnityEngine;
 
 public class Comportamiento : MonoBehaviour
 {
-    public Transform Cube;
+    
+    public Animator CubeAnimator;
+    public Animator SphereAnimator;
+    public Animator CylinderAnimator;
     void Start()
     {
          
-    }
-
-    
+    }    
     void Update()
     {
-        Cube.Rotate(45f * Time.deltaTime , 10f * Time.deltaTime, 25f * Time.deltaTime);
-        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            CubeAnimator.SetTrigger("TriggerAumentar");
+        }           
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            CubeAnimator.SetTrigger("TriggerDisminuir");
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SphereAnimator.SetTrigger("MoveCurveUpTrigger");
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            SphereAnimator.SetTrigger("MoveCurveDownTrigger");
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            CubeAnimator.SetTrigger("TriggerChangeColourCube");
+        }      
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            SphereAnimator.SetTrigger("TriggerChangeColourSphere");
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            CylinderAnimator.SetTrigger("TriggerRotandMoveCylinder");
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            CylinderAnimator.SetTrigger("TriggerRotandMoveCylinderReverse");
+        }
+
+
+
     }
 }
