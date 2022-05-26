@@ -225,9 +225,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterController: {fileID: 1402311163}
-  SpeedWalk: 0
-  SpeedRun: 0
+  SpeedWalk: 1
+  SpeedRun: 5
   Animator: {fileID: 1402311161}
+  JumpForce: 1000
+  Gravity: 20
 --- !u!1 &1596632389
 GameObject:
   m_ObjectHideFlags: 0
