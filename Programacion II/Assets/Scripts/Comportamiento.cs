@@ -8,10 +8,21 @@ public class Comportamiento : MonoBehaviour
     public Animator CubeAnimator;
     public Animator SphereAnimator;
     public Animator CylinderAnimator;
+    public GameObject Prefab;
+    public Vector3 PuntoRespawn;
     void Start()
     {
          
-    }    
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pelota"))
+        {
+            Destroy(other.gameObject);
+            Instantiate(Prefab, PuntoRespawn, Quaternion.identity);
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
