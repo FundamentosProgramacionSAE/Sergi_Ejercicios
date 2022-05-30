@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveController : MonoBehaviour
+public class MoveControllerKinematic : MonoBehaviour
 {
-    public float Fuerza = 10f;
+    public float Velocity = 10f;
 
     private Rigidbody _rigidbody;
     private Vector3 _movementDirection = Vector3.zero;
@@ -16,17 +16,14 @@ public class MoveController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.AddForce(_movementDirection.normalized * Fuerza, ForceMode.Force); 
+        _rigidbody.MovePosition(_rigidbody.position + _movementDirection.normalized * Velocity * Time.fixedDeltaTime); 
     }
 
-    private void Move()
+    void Update()
     {
         _movementDirection.x = Input.GetAxis("Horizontal");
         _movementDirection.z = Input.GetAxis("Vertical");
-    }
-    void Update()
-    {
-        Move();
+
     }
 
 
