@@ -7,17 +7,17 @@ using UnityEngine.SceneManagement;
 public class HUDController : MonoBehaviour
 {
 
-    //public Image BarraVida;
+    public Image BarraVida;
     //public SceneManager ControladorDeEscenas;
     void Start()
     {
-        //CambiarBarraVida(0.1f);
-        SceneManager.LoadScene(0);
+        CambiarBarraVida(0.1f);
+        //SceneManager.LoadScene(0);
     }
 
     public void CambiarBarraVida(float ValueVida)
     {
-        //BarraVida.fillAmount = ValueVida;
+        BarraVida.fillAmount = ValueVida;
         
     }
 

@@ -8,7 +8,7 @@ public class PlayerPracticeHUD : MonoBehaviour
     public HUDController HUDControlador;
     void Start()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
     }
 
     
