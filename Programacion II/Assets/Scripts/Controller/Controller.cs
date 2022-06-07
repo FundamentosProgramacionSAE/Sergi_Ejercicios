@@ -10,6 +10,7 @@ public class Controller : MonoBehaviour
     public Animator Animator;
     public float JumpForce;
     public float Gravity;
+    public bool Grounded;
     
 
     private float _velocity;
@@ -25,18 +26,18 @@ public class Controller : MonoBehaviour
         float zAxis = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(xAxis, 0f, zAxis);
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        /*if (Input.GetKey(KeyCode.LeftShift))
         {
             _velocity = SpeedRun;
         }
         else
         {
             _velocity = SpeedWalk;
-        }
+        }*/
 
         CharacterController.Move(movement * _velocity * Time.deltaTime);
 
-        if (_velocity == SpeedWalk)
+        /*if (_velocity == SpeedWalk)
         {
             Animator.SetFloat("Horizontal", xAxis, 0.1f, Time.deltaTime);
             Animator.SetFloat("Vertical", zAxis, 0.1f, Time.deltaTime);
@@ -44,9 +45,9 @@ public class Controller : MonoBehaviour
         else
         {
             Animator.SetFloat("Vertical", 2, 0.1f, Time.deltaTime);
-        }
-
-        if (CharacterController.isGrounded)
+        }*/
+        Grounded = CharacterController.isGrounded;
+        if (Grounded)
         {            
             movement *= _velocity;
 
