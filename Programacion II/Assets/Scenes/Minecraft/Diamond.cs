@@ -17,8 +17,17 @@ public class Diamond : Block
         }
     }
     public override void Destroy()
+    {              
+        base.Destroy();  
+        if(DiamondPure != null)
+        {
+            DiamondPure.SetActive(true);
+        }
+        
+
+    }
+    private void Update()
     {
-        base.Destroy();
-        DiamondPure.SetActive(true);
+        print(VidaDiamond + gameObject.name);
     }
 }
