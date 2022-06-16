@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    
-   
 
-    public virtual void Destroy()
-    {
+    
+
+   public virtual void Destroy()
+   {
         Destroy(this.gameObject);       
-    }
+   }
 
     
    
