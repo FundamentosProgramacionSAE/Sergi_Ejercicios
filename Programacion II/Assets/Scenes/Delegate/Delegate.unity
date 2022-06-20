@@ -489,9 +489,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1912607908}
-        m_TargetAssemblyTypeName: AttackController, Assembly-CSharp
-        m_MethodName: Attack
+      - m_Target: {fileID: 1912607909}
+        m_TargetAssemblyTypeName: KeysController, Assembly-CSharp
+        m_MethodName: EspadaYEscudo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
