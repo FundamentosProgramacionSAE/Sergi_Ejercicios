@@ -9,7 +9,7 @@ public class IA2_Persecucion : StateMachineBehaviour
     Transform IA2;
 
     float _velToGo = 1f;
-    float DisDeteccion = 8f;
+    float DisDeteccion = 6f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -23,7 +23,7 @@ public class IA2_Persecucion : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         IA2.position = Vector3.MoveTowards(IA2.position, Player.position, _velToGo * Time.deltaTime);
-        float DistanciaPlayerIA = Vector3.Distance(Player.position, IA2.position);
+        float DistanciaPlayerIA = Vector3.Distance(IA2.position, Player.position);
 
         if (DistanciaPlayerIA > DisDeteccion)
         {
