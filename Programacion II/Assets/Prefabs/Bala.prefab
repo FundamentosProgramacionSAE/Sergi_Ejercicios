@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5389393293908435891}
   - component: {fileID: 5019606889023781041}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Bala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
