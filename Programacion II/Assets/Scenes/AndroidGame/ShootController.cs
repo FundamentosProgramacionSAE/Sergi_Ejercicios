@@ -8,7 +8,7 @@ public class ShootController : MonoBehaviour
 
     public GameObject PrefabProjectil;
     public GameObject Gun;
-    public float Speed;
+    //public float Speed;
     
     void Start()
     {
@@ -17,13 +17,18 @@ public class ShootController : MonoBehaviour
 
     public void ShootProjectil()
     {
-        //Projectil = Instantiate(PrefabProjectil, Gun.transform.position, Quaternion.identity);
-        print("Shoot");
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(PrefabProjectil, Gun.transform.position, Gun.transform.rotation);
+            print("Shoot");
+        }
+
+       
     }
 
     
     void Update()
     {
-        
+        ShootProjectil();
     }
 }
